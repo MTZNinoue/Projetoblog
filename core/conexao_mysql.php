@@ -3,10 +3,10 @@
 function conecta() : mysqli
 {
     $servidor = 'localhost';
-    $banco = 'blog';
+    $banco = 'Projetoblog';
     $port = 3307;
     $usuario = 'root';
-    $senha = "masao";
+    $senha = "japao135";
     $conexao = mysqli_connect($servidor, $usuario, $senha, $banco, $port);
 
     if(!$conexao){
