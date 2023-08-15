@@ -1,10 +1,10 @@
 <?php
     require_once '../core/sql.php';
     $id = 1;
-    $nome = 'davi';
-    $email = 'davi.carvalho@aluno.ifsp.edu.br';
+    $nome = 'inoue';
+    $email = 'inoue.m@aluno.ifsp.edu.br';
     
-    $senha = 'xXxXxXxX';
+    $senha = 'japao135';
     $dados =
         [
             'nome' => $nome,
