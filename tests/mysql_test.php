@@ -5,7 +5,7 @@
     require_once '../core/sql.php';
     require_once '../core/mysql.php';
 
-    insert_teste ('João', 'joao@ifsp.edu.br', '123456'); 
+    insert_teste ('INOUE', 'inoue.m@ifsp.edu.br', 'japao135'); 
     buscar_teste();
     update_teste (2, 'murilo', 'silva@gmail.com'); 
     buscar_teste();
