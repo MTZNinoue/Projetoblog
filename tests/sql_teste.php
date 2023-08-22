@@ -1,33 +1,38 @@
 <?php
     require_once '../core/sql.php';
-
     $id = 1;
-    $nome = 'Inoue';
+    $nome = 'inoue';
     $email = 'inoue.m@aluno.ifsp.edu.br';
+    
     $senha = 'japao135';
-    $dados = ['nome' => $nome
-            , 'email' => $email
-            , 'senha' => $senha];
+    $dados =
+        [
+            'nome' => $nome,
+            'email' => $email,
+            'senha' => $senha
+        ];
 
     $entidade = 'usuario';
     $criterio = [['id', '=', $id]];
     $campos = ['id', 'nome', 'email'];
-    print_r($dados);
+
+    print_r($dados); 
     echo '<br>';
-    print_r($campos);
+    print_r($campos); 
     echo '<br>';
-    print_r($criterio);
+    print_r($criterio); 
     echo '<br>';
 
-    $instrucao = insert($entidade, $dados);
-    echo $instrucao . '<br>';
 
-    $instrucao = update($entidade, $dados, $criterio);
-    echo $instrucao . '<br>';
+    // Teste geração INSERT
+    $instrucao = insert ($entidade, $dados);
+    echo $instrucao. '<BR>';
+    // Teste geração UPDATE
+    $instrucao = update ($entidade, $dados, $criterio); 
+    echo $instrucao. '<BR>';
+    // Teste geração SELECT
+    $instrucao = select ($entidade, $campos, $criterio); 
+    echo $instrucao. '<BR>';
+    // Teste geração DELETE
 
-    $instrucao = select($entidade, $campos, $criterio);
-    echo $instrucao . '<br>';
-
-    $instrucao = delete($entidade, $criterio);
-    echo $instrucao . '<br>';
 ?>
