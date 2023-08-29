@@ -57,7 +57,7 @@ function select (string $entidade, array $campos, array $criterio, string $ordem
             $instrucao .= ' WHERE ';
 
         foreach ($criterio as $expressao) {
-            $instrucao .= implode('', $expressao);
+            $instrucao .= ' '.implode(' ', $expressao);
         }
     }
 

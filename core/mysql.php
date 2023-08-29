@@ -162,6 +162,7 @@ function buscar (string $entidade, array $campos = ['*'], array $criterio = [], 
     }
     
     $instrucao = select ($entidade, $campos, $coringa_criterio, $ordem);
+    //echo $instrucao;
     $conexao = conecta();
 
     $stmt = mysqli_prepare($conexao, $instrucao);
@@ -172,8 +173,9 @@ function buscar (string $entidade, array $campos = ['*'], array $criterio = [], 
         $comando.= "'" .implode('', $tipo). "'";
         $comando.= ', $'. implode(', $', $campos_criterio);
         $comando.= ');';
-        
+        //echo $comando;
         eval ($comando);
+      
     }
 
     mysqli_stmt_execute($stmt);
